@@ -2,7 +2,7 @@ extends ../layout
 
 block content
     h1 Edit shop
-    form(action="/shopname/edit"+newshop._id, method="post")
+    form(action="/shopname/edit/"+newshop._id, method="post")
         .form-group
             label(for="shopname") Shop Name
             input#shopname(type="text" ,class="form-control" ,name="shopname", value=newshop.shopname)
