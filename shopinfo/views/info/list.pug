@@ -1,0 +1,27 @@
+extend ../layout 
+
+block content 
+    .row
+        .col-sm-8
+            h1 List of shop
+        .col-sm-4
+            a(href="/shopname/add" class="btn btn-success") Add new shop
+    
+    table.table
+        thead
+            tr
+                th Shop Name
+                th Product Name
+                th Quantity
+                th Address
+                th Action
+        tbody
+            each shop in shops
+                tr
+                    td=shop.shopname
+                    td=shop.productname
+                    td=shop.quantity
+                    td=shop.address
+                    td
+                        a(href="/shopname/delete/"+shop._id,class="btn btn-danger") Delete
+                        a(href="/shopname/edit/"+shop._id,class="btn btn-warning") Edit
