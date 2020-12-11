@@ -1,6 +1,6 @@
 var mongoose=require("mongoose");
 var shopschema=mongoose.Schema({
-    quantity:Number,
+    quantity:String,
     address:String,
     productname:String,
     shopname :String,
